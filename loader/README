@@ -1,0 +1,27 @@
+Contains the project which runs the threads for Stanford parser, NER and WSD to parallelize the system.
+
+#######################
+How to RUN command line
+#######################
+
+execute ./run.sh
+
+
+#######################
+How to RUN eclipse
+#######################
+
+1. Open eclipse
+2. Create run configuration say "loader" with main program "loader.Main"
+3. Run the run configuration.
+
+
+############
+How to build
+############
+To build a new loaderprogramlatest.jar:
+1. In eclipse click on export -> Java -> Export as Runnable Jar
+2. Select run configuration created for loader.
+3. Give destination as Loader/loaderprogramlatest.jar
+4. Click on Finish
+

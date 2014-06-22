@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry exported="true" kind="lib" path="lib/stanford-parser.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/wsdEngine.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/stanford-parser-2012-03-09-models.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/stanford-ner-2012-03-09.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
