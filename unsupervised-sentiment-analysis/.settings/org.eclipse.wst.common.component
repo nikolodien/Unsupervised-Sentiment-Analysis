@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="unsupervised-sentiment-analysis">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/jwnl"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/sentiTopicModeling"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/semanticSent"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Mallet"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/json-io"/>
+        <property name="context-root" value="unsupervised-sentiment-analysis"/>
+        <property name="java-output-path" value="/unsupervised-sentiment-analysis/build/classes"/>
+    </wb-module>
+</project-modules>

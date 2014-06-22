@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="jwnl"/>
+	<classpathentry kind="src" path="sentiTopicModeling"/>
+	<classpathentry kind="src" path="semanticSent"/>
+	<classpathentry kind="src" path="Mallet"/>
+	<classpathentry kind="src" path="json-io"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/argparser.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/bsh.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/deco.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/grmm-deps.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jdom-1.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jgraph.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jgrapht-0.6.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jgrapht-jdk1.6.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/junit-4.5.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jxl.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/libsvm.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/lucene-analyzers-common-4.4.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/lucene-core-4.4.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/lucene-queryparser-4.4.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mallet-deps.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/maxent-2.5.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mit_wordnet.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mtj-0.9.9.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.1.26-bin.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/openjgraph.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/opennlp-0.8.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/opennlp-tools-1.4.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/sax2r2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/simplifier.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/stanford-corenlp-2012-07-09.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/stanford-ner-2012-03-09.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/stanford-parser-2012-03-09-models.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/stanford-parser-3.3.1-models.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/stanford-parser.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/trove-2.0.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/trove.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/unl.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/wsdEngine.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tomcat-i18n-es.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tomcat-i18n-fr.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tomcat-jdbc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tomcat-util.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/tomcat7-websocket.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
