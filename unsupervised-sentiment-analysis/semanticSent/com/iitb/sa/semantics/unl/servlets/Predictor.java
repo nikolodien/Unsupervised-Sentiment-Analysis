@@ -1,0 +1,56 @@
+package com.iitb.sa.semantics.unl.servlets;
+
+import iitb.unlenco.unl.UnlConverter;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.iitb.sa.semantics.unl.SentimentAnalyser;
+
+/**
+ * Servlet implementation class Predictor
+ */
+public class Predictor extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	UnlConverter unl = new UnlConverter();
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public Predictor() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		/*
+		 * response.getWriter().println(
+		 * unl.convert(request.getParameter("input")).toString());
+		 */
+		response.getWriter().println(
+				SentimentAnalyser.analyseSentenceSemanticallyEnhanced((request
+						.getParameter("input"))));
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+}

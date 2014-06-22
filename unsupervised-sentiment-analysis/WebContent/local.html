@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>
+    Sentiment Analysis
+  </title>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+  rel="stylesheet">
+  <style type="text/css">
+  body {
+    padding-top: 50px;
+  }
+  .starter-template {
+    padding: 40px 15px;
+  }
+  .bs_example {
+    margin: 20px;
+  }
+  </style>
+</head>
+
+<body>
+  <section id="tool">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Sentiment Analysis
+          </a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">Tool</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>
+        <b>Tool</b>
+      </h1>
+      <hr>
+      <div class="form-group">
+        <h4 class="text-center">
+          <b>Input</b>
+        </h4>
+        <textarea id="input" class="form-control" placeholder="Input Text"></textarea> <br>
+        <button type="submit" class="btn btn-default" id="predict">Predict</button>
+      </div>
+      <hr>
+      <div id="output">
+        <h4 class="text-center">
+          <b>Output</b>
+        </h4>
+        <div class="row" id="systems">
+          <div class="col-md-2">
+            <center>
+              <h3>
+                BoW
+              </h3>
+              <table class="table" id="bow_prediction">
+                <tbody>
+                </tbody>
+              </table>
+            </center>
+          </div>
+          <div class="col-md-2">
+            <center>
+              <h3>
+                LDA
+              </h3>
+              <table class="table" id="topic_prediction">
+                <tbody>
+                </tbody>
+              </table>
+            </center>
+          </div>
+          <div class="col-md-2">
+            <center>
+              <h3>
+                Topical n-gram
+              </h3>
+              <table class="table" id="topical_prediction">
+                <tbody>
+                </tbody>
+              </table>
+            </center>
+          </div>
+          <div class="col-md-2">
+            <center>
+              <h3>
+                UNL
+              </h3>
+              <table class="table" id="unl_prediction">
+                <tbody>
+                </tbody>
+              </table>
+            </center>
+          </div>
+          <div class="col-md-4">
+            <center>
+              <h3>
+                Consensus
+              </h3>
+              <table class="table" id="consensus">
+                <tbody>
+                </tbody>
+              </table>
+            </center>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+
+  <section>
+    <div class="container" id="about">
+      <h1>
+        <b>About</b>
+      </h1>
+      <p>
+        This Sentiment analysis tool will predict the sentiment of the given input text. The systems used are listed below. 
+      </p>
+      <li class="list-group-item">
+        <span class="badge">BoW</span>
+        This system uses a simple bag of words feature vector using support vector machines as a classifier.
+      </li>
+      <li class="list-group-item">
+        <span class="badge">LDA</span>
+        Latent Dirichlet allocation model is trained using two topics, positive and negative. The model is trained using a
+        prior list of positive and negative words.
+      </li>
+      <li class="list-group-item">
+        <span class="badge">TNG</span>
+        The topical n-grams model is trained similarly using just two topics, positive and negative. The training phase makes
+        use of a list of positive and negative words as well as rules to assign topics to bigrams.
+      </li>
+      <li class="list-group-item">
+        <span class="badge">UNL</span>
+        This is a rule based system. The input text is given to a UNL generator after pre-processing. The UNL graph thus
+        generated is subjected to rules which calculate the sentiment. This is a ternary classifier. All the other systems
+        are binary classifiers. It is not able to handle unstructured data.
+      </li>
+      <li class="list-group-item">
+        <span class="badge">Consensus</span>
+        The consensus algorithm is a simple summation algorithm which combines the outputs of BoW, Topical n-gram, and
+        the UNL rule based classifier. The idea behind using these systems is that they belong to three different classes.
+        BoW is supervised, Topical n-gram is semi-supervised, and BoW is completely unsupervised. Here, more weightage is
+        given to the UNL classifier because it performs the best for structured data. The reason to include the other two
+        systems is to handle unstructured data as well. UNL system usually gives objective output for unstructured data as
+        it is not able to parse it properly.
+      </li>
+    </ul>
+    <br>
+    <p>
+        Developed by <a href="http://in.linkedin.com/pub/nikhilkumar-jadhav/1b/201/723/">Nikhilkumar Jadhav</a>
+    </p>
+    <p>
+        Source code available at <a href="">this github repo</a>
+    </p>
+    <hr>
+  </div>
+</section>
+
+<section>
+  <div class="container" id="contact">
+    <h1>
+      <b>Contact us</b>
+    </h1>
+    <!-- <h3 style="color:#FF6633;"><?php echo $_GET[msg];?></h3> -->
+    <hr>
+    <!--Start Contact form -->                                                    
+    <form name="enq" method="post" action="email/" onsubmit="return validation();">
+
+      <fieldset>    
+        <input type="text" name="name" id="name" value=""  class="form-control" placeholder="Name" /> <br>
+        <input type="text" name="email" id="email" value="" class="form-control" placeholder="Email" /> <br>
+        <textarea rows="5" name="message" id="message" class="form-control" placeholder="Comments"></textarea>
+        <br>
+        <div class="actions">
+          <input type="submit" value="Send Your Message" name="submit" id="submitButton" class="btn btn-info pull-right" title="Click here to submit your message!" />
+        </div>  
+      </fieldset>
+    </form>          
+    <!--End Contact form -->
+    <hr>        
+  </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js">
+</script>
+
+<script>
+$(document).ready(function() {                       
+    $('#output').hide();
+    $('#predict').click(function(event) {  
+      var value=$('#input').val();
+      var responseText=0;
+      $.post('./sentiserver',{input:value},function(rt) {
+        var predictions = jQuery.parseJSON(rt);
+        if(predictions.bow==1)
+          $('#bow_prediction tbody').html('<tr><td bgcolor="00AA00" class="text-center"><font color="white">Positive</font></td><tr>');
+        else if(predictions.bow==-1)
+          $('#bow_prediction tbody').html('<tr><td bgcolor="AA0000" class="text-center"><font color="white">Negative</font></td><tr>');
+        else
+          $('#bow_prediction tbody').html('<tr><td bgcolor="0000AA" class="text-center"><font color="white">Objective</font></td><tr>');
+
+        if(predictions.topic==1)
+          $('#topic_prediction tbody').html('<tr><td bgcolor="00AA00" class="text-center"><font color="white">Positive</font></td><tr>');
+        else if(predictions.topic==-1)
+          $('#topic_prediction tbody').html('<tr><td bgcolor="AA0000" class="text-center"><font color="white">Negative</font></td><tr>');
+        else
+          $('#topic_prediction tbody').html('<tr><td bgcolor="0000AA" class="text-center"><font color="white">Objective</font></td><tr>');
+
+        if(predictions.topical==1)
+          $('#topical_prediction tbody').html('<tr><td bgcolor="00AA00" class="text-center"><font color="white">Positive</font></td><tr>');
+        else if(predictions.topical==-1)
+          $('#topical_prediction tbody').html('<tr><td bgcolor="AA0000" class="text-center"><font color="white">Negative</font></td><tr>');
+        else
+          $('#topical_prediction tbody').html('<tr><td bgcolor="0000AA" class="text-center"><font color="white">Objective</font></td><tr>');
+
+        if(predictions.unl==1)
+          $('#unl_prediction tbody').html('<tr><td bgcolor="00AA00" class="text-center"><font color="white">Positive</font></td><tr>');
+        else if(predictions.unl==-1)
+          $('#unl_prediction tbody').html('<tr><td bgcolor="AA0000" class="text-center"><font color="white">Negative</font></td><tr>');
+        else
+          $('#unl_prediction tbody').html('<tr><td bgcolor="0000AA" class="text-center"><font color="white">Objective</font></td><tr>');
+
+        if(predictions.consensus==1)
+          $('#consensus tbody').html('<tr><td bgcolor="00AA00" class="text-center"><font color="white">Positive</font></td><tr>');
+        else if(predictions.consensus==-1)
+          $('#consensus tbody').html('<tr><td bgcolor="AA0000" class="text-center"><font color="white">Negative</font></td><tr>');
+        else
+          $('#consensus tbody').html('<tr><td bgcolor="0000AA" class="text-center"><font color="white">Objective</font></td><tr>');
+
+        $('#output').show();
+      },'text');
+});
+});
+</script>
+</body>
+
+</html>
