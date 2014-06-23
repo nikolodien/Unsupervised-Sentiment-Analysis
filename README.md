@@ -4,7 +4,7 @@ There are two projects in this repository
 * loader
 * unsupervised-sentiment-analysis
 
-The dependencies and resources required by the unsupervised-sentiment-analysis project are present at [here](https://www.dropbox.com/sh/hh80s8sp22ngl64/AABEBLILA8u-PkTi7h_tx-Dwa)
+The dependencies and resources required by the unsupervised-sentiment-analysis project are present [here](https://www.dropbox.com/sh/hh80s8sp22ngl64/AABEBLILA8u-PkTi7h_tx-Dwa)
 
 ### Steps
 ===============================
