@@ -220,7 +220,7 @@ $(document).ready(function() {
     $('#predict').click(function(event) {  
       var value=$('#input').val();
       var responseText=0;
-      $.post('http://www.cfilt.iitb.ac.in/unsupervised-sentiment-analysis/sentiserver',{input:value},function(rt) {
+      $.post('./sentiserver',{input:value},function(rt) {
         var predictions = jQuery.parseJSON(rt);
         if(predictions.bow==1)
           $('#bow_prediction tbody').html('<tr><td bgcolor="00AA00" class="text-center"><font color="white">Positive</font></td><tr>');
