@@ -18,7 +18,7 @@ The dependencies and resources required by the unsupervised-sentiment-analysis p
 
 * Download the directory present [here](https://www.dropbox.com/sh/hh80s8sp22ngl64/AABEBLILA8u-PkTi7h_tx-Dwa)
 
-* After doing this, copy the `libs` folder inside the dropbox folder to the `unsupervised-sentiment-analysis/WebContent/WEB-INF/` directory of the project
+* After doing this, copy the `libs` folder to the `unsupervised-sentiment-analysis/WebContent/WEB-INF/` directory of the project
 
 ```
 > cp -r libs  unsupervised-sentiment-analysis/WebContent/WEB-INF/
@@ -39,6 +39,6 @@ The dependencies and resources required by the unsupervised-sentiment-analysis p
 > mysql -u username -p unldb3_0 < Database/unldb3_0.sql
 ```
 
-* Now, go to the `unsupervised-sentiment-analysis/WebContent/WEB-INF/classes/properties` folder and edit the username and passowrd in the `UnlEnco.properties` file
+* Now, go to the `unsupervised-sentiment-analysis/WebContent/WEB-INF/classes/properties` folder and edit the username and passowrd in the `UnlEnco.properties` file to match your mysql settings. 
 
 * After doing this, import the `unsupervised-sentiment-analysis` project into eclipse. This is a web application project. Run the project on the apache-tomcat server
