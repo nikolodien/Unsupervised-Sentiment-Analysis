@@ -9,4 +9,9 @@ You will need the following things to run this project
 
 Perform the steps as given in the README.md of the main repo to run the project. 
 
-The main class files to look
+Following are the main classes to look for
+* [SentimentAnalyser.java](https://github.com/nikolodien/Unsupervised-Sentiment-Analysis/blob/master/unsupervised-sentiment-analysis/semanticSent/com/iitb/sa/semantics/unl/SentimentAnalyser.java)
+* [BagOfWords.java](https://github.com/nikolodien/Unsupervised-Sentiment-Analysis/blob/master/unsupervised-sentiment-analysis/src/org/iitb/sa/classifiers/BagOfWords.java)
+* [SentiTopicClassifier.java](https://github.com/nikolodien/Unsupervised-Sentiment-Analysis/blob/master/unsupervised-sentiment-analysis/src/org/iitb/sa/classifiers/SentiTopicClassifier.java)
+* [SentiTopicalBigramClassifier.java](https://github.com/nikolodien/Unsupervised-Sentiment-Analysis/blob/master/unsupervised-sentiment-analysis/src/org/iitb/sa/classifiers/SentiTopicalBigramClassifier.java)
+* [SentiServer.java](https://github.com/nikolodien/Unsupervised-Sentiment-Analysis/blob/master/unsupervised-sentiment-analysis/src/org/iitb/sa/servlets/SentiServer.java)
