@@ -139,7 +139,7 @@ public class Preprocessor {
 			if (abbreviations.containsKey(string)) {
 				string = abbreviations.get(string);
 			}
-			sb.append(string + " " + ((special) ? " " + ch : " "));
+			sb.append(string + " " + ((special) ? " " + ch + " ": " "));
 		}
 		return sb;
 	}
