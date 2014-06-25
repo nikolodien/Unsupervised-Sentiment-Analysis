@@ -21,6 +21,7 @@ public class SentiTopicClassifier {
 		initPipe("resources/sentitopic/text_300000_fortopicmodeling.mallet");
 	}
 
+	// loads the classifier
 	private static void loadClassifier(String filename) {
 		ObjectInputStream ois;
 		try {
@@ -41,6 +42,7 @@ public class SentiTopicClassifier {
 		}
 	}
 
+	// Loads the text processing pipe
 	private static void initPipe(String inputFile) {
 		// TODO Auto-generated method stub
 		pipe = InstanceList.load(
@@ -48,10 +50,14 @@ public class SentiTopicClassifier {
 						.getResource(inputFile).getPath())).getPipe();
 	}
 
+	// Returns the result of classification using the trained topic model
 	public static int classify(String text) {
 		if (inferencer != null) {
+			// Creates a news Instance
 			Instance instance = new Instance(text, null, null, null);
+			// The processsors in the pipe are applied on the new input text
 			instance = pipe.instanceFrom(instance);
+			// This is sent to a trained classifier to get the topic distribution
 			double[] distribution = inferencer.getSampledDistribution(instance,
 					100, 10, 10);
 			System.out.println(distribution[0]);
@@ -66,10 +72,12 @@ public class SentiTopicClassifier {
 		}
 	}
 
+	// Creates an instance. Not implemented for now
 	public Instance createInstance(String text) {
 		return null;
 	}
 
+	// Main function to test locally before deploying on server
 	public static void main(String[] args) throws IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
 				System.in));
